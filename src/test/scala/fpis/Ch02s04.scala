@@ -17,9 +17,9 @@ import org.scalatest.matchers.ShouldMatchers
  * - FYI it's possible to use asserts here and the tests will
  *   run properly
  */
-class UpTo2_4_Spec extends FunSpec with ShouldMatchers {
+class Ch02s04Spec extends FunSpec with ShouldMatchers {
 
-  import UpTo2_4.{factorial, fibbonacci}
+  import Ch02s04.{factorial, fibbonacci}
 
   describe("The factorial function") {
 
@@ -61,9 +61,9 @@ import org.testng.Assert.assertEquals
  *     understandable to java. So you may need to cast scala types,
  *     e.g. Int here, to Java types; this is a little annoying
  */
-class AbsSuite extends TestNGSuite {
+class Ch02s04Suite extends TestNGSuite {
 
-  import UpTo2_4.{formatUnary, abs}
+  import Ch02s04.{formatUnary, abs}
 
   @DataProvider(name = "provider")
   def provideData = {

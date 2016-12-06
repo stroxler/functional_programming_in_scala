@@ -4,11 +4,14 @@ package fpis
 /**
   * Introductory examples: everything up through the end of section 2.4
   */
-object UpTo2_4 {
+object Ch02s04 {
 
   /**
    * Run method: this is from prior to using a test package to run my code,
    * when I needed something to sbt run in order to see my outputs
+   *
+   * It's the only example I'll leave in this codebase of my pre-using-tests
+   * dev workflow :)
    */
   def run(): String = {
     List(
@@ -29,20 +32,20 @@ object UpTo2_4 {
 
   def factorial(n: Int): Int = {
     @annotation.tailrec
-    def go(n: Int, product: Int = 1): Int = {
+    def loop(n: Int, product: Int = 1): Int = {
       if (n <= 1) product
-      else go(n - 1, product * n)
+      else loop(n - 1, product * n)
     }
-    go(n)
+    loop(n)
   }
 
   def fibbonacci(n: Int): Int = {
     @annotation.tailrec
-    def go(n_left : Int, last: Int = 1, current: Int = 1): Int = {
+    def loop(n_left : Int, last: Int = 1, current: Int = 1): Int = {
       if (n_left <= 1) current
-      else go(n_left - 1, current, current + last)
+      else loop(n_left - 1, current, current + last)
     }
-    go(n - 1)
+    loop(n - 1)
   }
 
 }
